@@ -244,8 +244,8 @@ export class TraceModel {
     }
     // if (event.type === 'action' || event.type === 'before')
     //   contextEntry.startTime = Math.min(contextEntry.startTime, event.startTime);
-    // if (event.type === 'action' || event.type === 'after')
-    //   contextEntry.endTime = Math.max(contextEntry.endTime, event.endTime);
+    if (event.type === 'action' || event.type === 'after')
+      contextEntry.endTime = Math.max(contextEntry.endTime, event.endTime);
     if (event.type === 'event') {
       contextEntry.startTime = Math.min(contextEntry.startTime, event.time);
       contextEntry.endTime = Math.max(contextEntry.endTime, event.time);
