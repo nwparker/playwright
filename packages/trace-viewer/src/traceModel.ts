@@ -242,6 +242,7 @@ export class TraceModel {
         this._snapshotStorage!.addFrameSnapshot(event.snapshot);
         break;
     }
+    // Fixes TL
     // if (event.type === 'action' || event.type === 'before')
     //   contextEntry.startTime = Math.min(contextEntry.startTime, event.startTime);
     // if (event.type === 'action' || event.type === 'after')
