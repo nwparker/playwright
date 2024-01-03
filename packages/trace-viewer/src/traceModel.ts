@@ -242,8 +242,8 @@ export class TraceModel {
         this._snapshotStorage!.addFrameSnapshot(event.snapshot);
         break;
     }
-    if (event.type === 'action' || event.type === 'before')
-      contextEntry.startTime = Math.min(contextEntry.startTime, event.startTime);
+    // if (event.type === 'action' || event.type === 'before')
+    //   contextEntry.startTime = Math.min(contextEntry.startTime, event.startTime);
     if (event.type === 'action' || event.type === 'after')
       contextEntry.endTime = Math.max(contextEntry.endTime, event.endTime);
     if (event.type === 'event') {
